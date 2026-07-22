@@ -1,0 +1,18 @@
+Validation summary for session-closeout package
+
+Passed checks:
+- Frontmatter present at start of `session-closeout/SKILL.md`
+- Required bundled files exist:
+  - `session-closeout/SKILL.md`
+  - `session-closeout/references/platform-behavior.md`
+  - `session-closeout/references/knowledge-routing.md`
+  - `session-closeout/references/verification-checklist.md`
+  - `session-closeout/evals/evals.json`
+- `SKILL.md` line budget is within 500 lines (104 lines)
+- Trigger boundaries now distinguish closeout prompts from generic tidying
+- Reference pointers in `SKILL.md` match the bundled reference paths
+- Permission language includes `explicit user confirmation`
+
+Notes:
+- Generic tidying, file organization, prose cleanup, and data cleanup are explicitly excluded.
+- Closeout triggers remain for explicit commands and natural-language closeout requests.

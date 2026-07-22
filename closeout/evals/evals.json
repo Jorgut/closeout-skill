@@ -1,0 +1,47 @@
+{
+  "skill_name": "closeout",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/closeout",
+      "expected_output": "Runs full closeout workflow: inventories docs/rules/memory, aligns facts, applies auto-fixes, lists deletion candidates, produces two-phase report.",
+      "classification": "explicit command",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "/净化",
+      "expected_output": "Chinese trigger works: runs session closeout with same behavior as English triggers.",
+      "classification": "explicit command",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "sync docs and memory",
+      "expected_output": "Triggers natural-language closeout: discovers platform, runs Light Path by default, reconciles docs/rule files/authorized memory against current code reality, reports impact and decisions needed.",
+      "classification": "natural language",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "tidy up this file",
+      "expected_output": "Does NOT trigger. Generic file tidying without project-knowledge context is explicitly excluded.",
+      "classification": "non-trigger boundary",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "clean up my prose",
+      "expected_output": "Does NOT trigger. Prose cleanup is explicitly excluded from scope.",
+      "classification": "non-trigger boundary",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "organize my downloads folder",
+      "expected_output": "Does NOT trigger. Non-project file organization is out of scope.",
+      "classification": "non-trigger boundary",
+      "files": []
+    }
+  ]
+}
