@@ -5,20 +5,26 @@ description: >
   and authorized agent memory against current project reality. Mixed permissions: safe
   reversible fixes auto-applied; destructive or cross-project changes require
   explicit user confirmation before acting. Cross-platform: OpenCode, Claude Code, Codex.
-  Triggers: direct command "/closeout" or "/净化"; natural language
+  Triggers: registered command "/closeout" when the optional platform command
+  adapter is installed; natural language
   "closeout", "收尾", "扫尾", "同步", "sync up", "tidy up", "净化一下", "知识净化",
   "end of session", "task done, tidy up", "knowledge closeout", "knowledge sync".
   Do NOT trigger for generic tidying, file organization,
   prose cleanup, data cleanup, or coding tasks without project-knowledge context.
-compatibility: Requires filesystem read access. Writes and destructive actions
-  follow the active agent, workspace, and user authorization rules. Works on any
-  Agent Skills platform.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0-beta"
   category: knowledge-governance
+  compatibility: "Requires filesystem read access; writes follow active platform permissions"
 ---
 
 # closeout — 净化
+
+## Installation and Invocation
+- The repository includes `scripts/install_closeout.py` for safe cross-platform installation. It previews by default and requires both `--apply` and `--confirm` before writing.
+- The installer keeps one canonical copy at `~/.agents/skills/closeout` and links selected platform skill directories to it.
+- OpenCode and Claude Code use the optional registered `/closeout` adapter. Copying the skill directory alone does not register it.
+- Codex invokes the skill as `$closeout` or through natural language; it does not use the bundled Markdown slash-command adapter.
+- Restart the selected Agent applications after installing or changing command adapters.
 
 ## v1 Scope Contract (locked)
 - **IN SCOPE**: project docs/README, rule files (CLAUDE.md / AGENTS.md or platform equivalent), authorized agent memory.
