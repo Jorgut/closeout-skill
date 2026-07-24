@@ -101,5 +101,6 @@ ls ~/.config/opencode/skills/closeout/
 
 - The runtime skill is self-contained; the repository-level installer is only for setup
 - All platform logic lives in `references/platform-behavior.md` (read-only guidance)
-- `evals/evals.json` covers 3 trigger families + 3 negative boundaries
-- Line budget: SKILL.md ≤ 500 lines (currently ~100)
+- `evals/evals.json` covers trigger, permission, behavior, and regression layers
+- `scripts/run_evals.py validate` checks the deterministic eval contract
+- Line budget: SKILL.md ≤ 500 lines

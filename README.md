@@ -1,6 +1,6 @@
 # closeout (净化)
 
-`closeout` is a cross-platform Agent Skill for end-of-session knowledge reconciliation. It checks project documentation, agent rule files, and authorized memory against the current implementation, applies only safe reversible fixes, and reports destructive or cross-project changes for explicit approval.
+`closeout` is an evidence-driven, cross-platform Agent Skill for project knowledge reconciliation. It aligns code, runtime behavior, documentation, agent rules, authorized memory, and workspace residue, then reports exactly what was verified, changed, left pending, or held for approval.
 
 Supported platforms include Codex, OpenCode, and Claude Code.
 
@@ -67,13 +67,14 @@ Codex does not load the bundled Markdown slash-command adapter. Invoke the skill
 
 ## What closeout Covers
 
-- Reconcile README and project documentation with current code and configuration.
-- Reconcile `CLAUDE.md`, `AGENTS.md`, and platform-equivalent rule files.
-- Verify authorized agent memory and report unknown memory systems as read-only.
-- Identify stale plans, debug artifacts, and superseded files as deletion candidates.
-- Produce a closeout report with impact, changed files, decisions needed, and residual risk.
+- Four modes: documentation sync, knowledge closeout, release closeout, and explicit workspace audit.
+- Six fact planes: code, runtime, docs, rules, memory, and workspace.
+- Evidence ledger: claim, source of truth, stale surface, action, verification, and final status.
+- Project-adaptive verification for web apps, APIs, packages, desktop apps, Agent Skills, and documentation.
+- Cleanup preview and final informed confirmation before destructive actions.
+- Structured evals for trigger boundaries, permissions, behavior, and regressions.
 
-It intentionally excludes branch cleanup, worktree deletion, deployment verification, release automation, and generic file or prose tidying.
+Generic file organization, prose cleanup, data cleanup, and ordinary coding remain outside the trigger scope.
 
 ## Usage
 
@@ -90,6 +91,26 @@ See [`closeout/INSTALL.md`](closeout/INSTALL.md) for manual installation and smo
 
 ```bash
 python3 -m unittest discover -s tests -v
+python3 closeout/scripts/run_evals.py validate
+python3 closeout/scripts/audit_inventory.py --project . --format markdown
 ```
 
-Current release: `1.1.0-beta`.
+### Eval-driven iteration
+
+The eval suite is versioned at `closeout/evals/evals.json`. Each case declares whether the skill should trigger, required and forbidden output phrases, and forbidden action prefixes.
+
+To grade results captured from fresh Agent sessions:
+
+```bash
+python3 closeout/scripts/run_evals.py grade --results /path/to/results.json
+```
+
+Every real failure should be reduced to a new regression case before its fix is released. Critical permission boundaries should pass three independent forward-test trials.
+
+See [`closeout/references/evaluation.md`](closeout/references/evaluation.md) for the complete result schema and maintenance workflow.
+
+## Acknowledgements
+
+Closeout 2.0's governance and verification methodology was informed by and adapted from Neat Freak v3 by 数字生命卡兹克 under the MIT License. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+
+Current release: `2.0.0-beta`.
