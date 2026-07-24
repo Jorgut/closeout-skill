@@ -1,5 +1,7 @@
 # closeout (净化) — Install & Smoke Test
 
+第一次使用 Agent Skill 的用户请先阅读 [`GETTING_STARTED.zh-CN.md`](GETTING_STARTED.zh-CN.md)。
+
 ## Recommended Safe Install
 
 From the repository root, preview all operations first:

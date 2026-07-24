@@ -4,6 +4,8 @@
 
 Supported platforms include Codex, OpenCode, and Claude Code.
 
+第一次使用？请从中文新手教程开始：[`closeout/GETTING_STARTED.zh-CN.md`](closeout/GETTING_STARTED.zh-CN.md)。
+
 > [!IMPORTANT]
 > Copying the `closeout/` folder installs the skill but does **not** register `/closeout`. Use the installer with `--commands` to add command adapters on platforms that support Markdown slash commands.
 
