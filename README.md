@@ -109,8 +109,4 @@ Every real failure should be reduced to a new regression case before its fix is 
 
 See [`closeout/references/evaluation.md`](closeout/references/evaluation.md) for the complete result schema and maintenance workflow.
 
-## Acknowledgements
-
-Closeout 2.0's governance and verification methodology was informed by and adapted from Neat Freak v3 by 数字生命卡兹克 under the MIT License. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
-
 Current release: `2.0.0-beta`.
