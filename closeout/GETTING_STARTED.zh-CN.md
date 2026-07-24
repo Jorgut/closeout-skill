@@ -1,5 +1,7 @@
 # Closeout 新手使用教程
 
+**中文** | [English](GETTING_STARTED.en.md) | [Русский](GETTING_STARTED.ru.md)
+
 Closeout 用于项目完成一个阶段后的“事实收尾”：核对代码、实际运行结果、文档、Agent 规则、获准维护的记忆和工作区残留是否一致。
 
 它不是普通的文件整理工具，也不会在未经确认时删除文件、分支或 worktree。

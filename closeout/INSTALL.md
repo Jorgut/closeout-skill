@@ -1,6 +1,6 @@
 # closeout (净化) — Install & Smoke Test
 
-第一次使用 Agent Skill 的用户请先阅读 [`GETTING_STARTED.zh-CN.md`](GETTING_STARTED.zh-CN.md)。
+Beginner guides: [中文](GETTING_STARTED.zh-CN.md) | [English](GETTING_STARTED.en.md) | [Русский](GETTING_STARTED.ru.md)
 
 ## Recommended Safe Install
 
