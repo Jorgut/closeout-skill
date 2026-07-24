@@ -1,3 +1,8 @@
+[![skills.sh](https://img.shields.io/badge/skills.sh-Jorgut/closeout--skill-8A2BE2?style=flat-square)](https://skills.sh/Jorgut/closeout-skill)
+[![Install with npx](https://img.shields.io/badge/npx%20skills%20add-Jorgut%2Fcloseout--skill-000?style=flat-square)](https://github.com/Jorgut/closeout-skill)
+![License](https://img.shields.io/github/license/Jorgut/closeout-skill?style=flat-square)
+![Agent Skill](https://img.shields.io/badge/Agent%20Skill-Closeout-FF4444?style=flat-square)
+
 # closeout (净化)
 
 `closeout` is an evidence-driven, cross-platform Agent Skill for project knowledge reconciliation. It aligns code, runtime behavior, documentation, agent rules, authorized memory, and workspace residue, then reports exactly what was verified, changed, left pending, or held for approval.
@@ -10,6 +15,14 @@ Supported platforms include Codex, OpenCode, and Claude Code.
 > Copying the `closeout/` folder installs the skill but does **not** register `/closeout`. Use the installer with `--commands` to add command adapters on platforms that support Markdown slash commands.
 
 ## Install
+
+### Quick install (recommended)
+
+```bash
+npx skills add Jorgut/closeout-skill
+```
+
+### Manual install
 
 Requirements: Git and Python 3.10 or newer.
 
