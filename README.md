@@ -11,6 +11,17 @@ Supported platforms include Codex, OpenCode, and Claude Code.
 
 新手教程 / Beginner guides / Руководства: [中文](closeout/GETTING_STARTED.zh-CN.md) | [English](closeout/GETTING_STARTED.en.md) | [Русский](closeout/GETTING_STARTED.ru.md)
 
+## Repository Layout
+
+This repository has two `SKILL.md` files on purpose:
+
+| Path | Purpose |
+| --- | --- |
+| `SKILL.md` | GitHub/root entrypoint for skill catalogs and installers |
+| `closeout/SKILL.md` | The actual skill package installed into agent skill directories |
+
+If you install manually, copy or symlink the `closeout/` folder, not only the root `SKILL.md`.
+
 > [!IMPORTANT]
 > Copying the `closeout/` folder installs the skill but does **not** register `/closeout`. Use the installer with `--commands` to add command adapters on platforms that support Markdown slash commands.
 
